@@ -1,0 +1,285 @@
+/* styles.css */
+
+:root {
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 18px;
+  color: var(--grayish-blue);
+  text-align: center;
+  background: url('images/bg-header-mobile.png') no-repeat top center;
+  background-size: contain;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--dark-grayish-blue);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+.header{
+  padding: 5rem 1rem
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 3rem;
+}
+
+.hero-text{
+  font-size: 1rem;
+  padding: 0 1rem;
+  opacity: 0.8;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-ios {
+  background: var(--strong-cyan);
+  color: white;
+}
+
+.btn-mac {
+  background: var(--light-blue);
+  color: white;
+}
+
+.grid {
+  margin-top: 4rem;
+}
+
+.image-large {
+  margin-bottom: 4rem;
+}
+
+.features {
+  text-align: left;
+}
+
+.feature {
+  margin-bottom: 3rem;
+}
+
+.feature:last-child {
+  margin-bottom: 0;
+}
+
+.devices-img {
+  margin: 4rem auto 0;
+}
+
+.workflow-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-top: 4rem;
+}
+
+.workflow-grid img{
+  margin-bottom: 2.5rem;
+}
+
+.item img {
+  margin-bottom: 2rem;
+}
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+.partners img {
+  width: 120px;
+}
+
+.footer {
+  background: #f5f6f8;
+  padding: 3rem 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.footer .logo {
+  width: 50px;
+  margin: 0 auto 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2.0rem;
+  opacity: 0.75;
+}
+
+.footer-links a {
+  color: var(--dark-grayish-blue);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--strong-cyan);
+}
+
+.social {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  cursor: pointer;
+}
+
+.social img {
+  width: 20px;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  body {
+    background-image: url('images/bg-header-desktop.png');
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+    max-width: none;
+  }
+
+  .btn {
+    min-width: 240px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 6rem auto;
+    text-align: left;
+  }
+
+  .computer-img {
+    margin: 0;
+    transform: translateX(-5%);
+  }
+
+  .features {
+    text-align: left;
+  }
+
+  .workflow-grid {
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 6rem auto;
+  }
+
+  .item {
+    max-width: 350px;
+  }
+
+  .partners {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer {
+    grid-template-columns: 150px 1fr 150px;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer .logo {
+    margin: 0;
+  }
+
+  .footer-links {
+    grid-column: 2;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  section {
+    padding: 6rem 0;
+  }
+}
